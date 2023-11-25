@@ -1,0 +1,27 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result-style.css') }}">
+</head>
+<body class="bg-light">
+
+    <div class="show-results">
+        <h2>Resultados</h2>
+
+        <div class="infos">
+            <p><strong>Classificador:</strong> {{ classifier }}</p>
+            <p><strong>Acurácia:</strong> {{ accuracy }}</p>
+            <p><strong>F1 Score:</strong> {{ f1_score }}</p>
+        </div>
+
+        <img src="data:image/png;base64,{{ img_data }}" alt="Confusion Matrix" class="img-fluid mb-3">
+            </form>
+        </div>
+    
+    </body>
+    </html>
+    

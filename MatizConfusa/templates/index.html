@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grazi Learning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-group">
+        <form action="/result" method="post">
+            <div class="form-params">
+                <label for="classifier">Selecionar Classificador:</label>
+                <select class="form-control" id="classifier" name="classifier" required>
+                    <option value="KNN">K-Nearest Neighbors</option>
+                    <option value="SVM">Support Vector Machine</option>
+                    <option value="MLP">Multi-Layer Perceptron</option>
+                    <option value="DT">Decision Tree</option>
+                    <option value="RF">Random Forest</option>
+                </select>
+            </div>
+
+            <div class="form-params">
+                <label for="param1">Parâmetro 1:</label>
+                <input type="number" class="form-control" id="param1" name="param1" value="5.0" step="0.1">
+            </div>
+
+            <div class="form-params">
+                <label for="param2">Parâmetro 2:</label>
+                <input type="number" class="form-control" id="param2" name="param2" value="10" min="1">
+            </div>
+
+            <div class="form-params">
+                <label for="param3">Parâmetro 3:</label>
+                <input type="text" class="form-control" id="param3" name="param3" value="null" placeholder="0">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Confirmar</button>
+        </form>
+    </div>
+</body>
+</html>
